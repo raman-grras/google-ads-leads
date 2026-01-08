@@ -36,6 +36,10 @@ app.use("/api/auth", adminRoute)
 
 
 const userRoute = require("./routes/user.route");
+
+app.get("/",(req,res)=>{
+  res.send("server running")
+})
 app.use("/api/users", userRoute);
 
 const webhookRoute = require("./routes/webhook.route")
